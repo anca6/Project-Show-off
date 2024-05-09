@@ -27,11 +27,11 @@ public class PlayerMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 movementDir = orientation.forward * verticalInput + orientation.right * horizontalinput;
-        rb.AddForce(movementDir.normalized * moveSpeed, ForceMode.Force);
+        //rb.AddForce(movementDir.normalized * moveSpeed, ForceMode.Force);
 
         rb.velocity += movementDir * acceleration /** Time.deltaTime*/;
 
-        // Limit the velocity to the maximum move speed
+        //limit the velocity to the maximum move speed
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, moveSpeed);
 
         //SpeedControl();
@@ -44,11 +44,12 @@ public class PlayerMovement : MonoBehaviour
         else rb.drag = 0;
     }
 
-   /* private void SpeedControl()
+    /*private void SpeedControl()
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        if(flatVel.magnitude > moveSpeed) { 
+        if (flatVel.magnitude > moveSpeed)
+        {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }

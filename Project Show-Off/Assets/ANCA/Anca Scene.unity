@@ -881,6 +881,7 @@ GameObject:
   - component: {fileID: 1174565640}
   - component: {fileID: 1174565642}
   - component: {fileID: 1174565643}
+  - component: {fileID: 1174565644}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -951,6 +952,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundDrag: 2
+--- !u!114 &1174565644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174565639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 1e9959a0bd8421e4d980c5cbdf00d83b,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1235500775
 GameObject:
   m_ObjectHideFlags: 3
@@ -1922,6 +1954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915487674}
   - component: {fileID: 1915487673}
+  - component: {fileID: 1915487675}
   m_Layer: 0
   m_Name: TopdownCam
   m_TagString: Untagged
@@ -1971,7 +2004,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_SpeedMode: 0
-    m_MaxSpeed: 2
+    m_MaxSpeed: 1.2
     m_AccelTime: 0.2
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -1995,7 +2028,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 150
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -2052,6 +2085,22 @@ Transform:
   - {fileID: 223795024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1915487675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915487672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerIndex: -1
+  AutoEnableInputs: 1
+  XYAxis: {fileID: 2980525019641022107, guid: 1e9959a0bd8421e4d980c5cbdf00d83b, type: 3}
+  ZAxis: {fileID: 0}
 --- !u!1 &1920170816
 GameObject:
   m_ObjectHideFlags: 3
